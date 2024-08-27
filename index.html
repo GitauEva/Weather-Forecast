@@ -15,6 +15,7 @@
   <body>
     <div class="main-content">
       <header>
+        <form>
         <h1 class="welcome">Welcome to Clima Forecast</h1>
         <input
           type="search"
@@ -23,12 +24,13 @@
           placeholder="Enter a City ..."
           required
         />
-        <input type="submit" value="Search" name="submit" id="submit" />
+        <input type="submit" value="Search" name="submit" id="submit">
+        </form>
       </header>
       <hr />
       <main>
         <div class="main-container">
-          <h1 class="main-city">Nairobi</h1>
+          <h1 class="main-city" id="main-city">Nairobi</h1>
           <p>
             Tuesday 14:20, Scattered Clouds <br />
             Humidity: <strong> 63%</strong>, Wind: <strong> 2.68km/h</strong>
@@ -54,5 +56,6 @@
         </p>
       </footer>
     </div>
+    <script src="src/scripts.js"></script>
   </body>
 </html>
