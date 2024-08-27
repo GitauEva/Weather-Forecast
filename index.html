@@ -3,32 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather Forecast</title>
   </head>
   <body>
-    <div>
+    <div class="main-content">
       <header>
+        <h1 class="welcome">Welcome to Clima Forecast</h1>
         <input
           type="search"
           name="search"
           id="search"
           placeholder="Enter a City ..."
+          required
         />
-        <input type="button" value="search" name="search-btn" id="search-btn" />
+        <input type="submit" value="Search" name="submit" id="submit" />
       </header>
       <hr />
       <main>
-        <div>
-          <h2>Nairobi</h2>
+        <div class="main-container">
+          <h1 class="main-city">Nairobi</h1>
           <p>
             Tuesday 14:20, Scattered Clouds <br />
-            Humidity: 63%, Wind: 2.68km/h
+            Humidity: <strong> 63%</strong>, Wind: <strong> 2.68km/h</strong>
           </p>
         </div>
-        <div>
-          <p>⛅ 12°C</p>
+        <div class="weather-details">
+          <p><div class="weather-icon">⛅</div> <div class="weather-value"> 12</div> <div class="weather-metrics">°C</div></p>
         </div>
       </main>
+      <hr />
       <footer>
         <p>
           This project was coded by
