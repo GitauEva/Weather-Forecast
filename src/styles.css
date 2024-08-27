@@ -1,0 +1,82 @@
+body {
+  background-color: rgba(240, 128, 128, 0.205);
+  font-family: "Josefin Sans", sans-serif;
+}
+.main-content {
+  background-color: white;
+  max-width: 600px;
+  margin: 45px auto;
+  padding: 20px;
+  box-shadow: rgba(28, 21, 44, 0.08);
+  border-radius: 20px;
+}
+#search {
+  width: 78%;
+  padding: 15px 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(240, 128, 128, 0.205);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+#submit {
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: lightcoral;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+#submit:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px;
+}
+.welcome {
+  text-align: center;
+}
+header {
+  margin-bottom: 20px;
+}
+/* main */
+main {
+  display: flex;
+  justify-content: space-between;
+}
+.main-city {
+  margin-top: 20px;
+  font-size: 40px;
+}
+.main-container p {
+  line-height: 20px;
+  font-size: 16px;
+}
+.weather-details {
+  display: flex;
+  margin-top: 35px;
+}
+.weather-icon {
+  font-size: 40px;
+  margin-top: 10px;
+}
+.weather-value {
+  font-size: 88px;
+}
+.weather-metrics {
+  font-size: 30px;
+  margin-top: 10px;
+}
+strong {
+  color: lightcoral;
+}
+/* Footer Styling */
+footer {
+  font-size: 13px;
+  text-align: center;
+  color: grey;
+  padding-top: 5px;
+  margin-bottom: 0;
+}
+a {
+  color: lightcoral;
+  font-weight: bold;
+}
