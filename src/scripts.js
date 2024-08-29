@@ -1,15 +1,14 @@
-//Submit Button
-let submitBtn = document.querySelector("#submit");
+let searchForm = document.querySelector("#search-form");
 
-function searchCity(event) {
+function displayInfo(event) {
   event.preventDefault();
-  //City Search
-  let citySearch = document.querySelector("#search");
-  //City h1
-  let mainCity = document.querySelector("#main-city");
-  let citySearchValue = citySearch.value;
 
-  mainCity.innerHTML = citySearchValue;
+  //Getting the Value in the Search Bar
+  let search = document.querySelector("#search");
+  let searchValue = search.value;
+  //Getting the HTML to be able to display the Value from the search bar
+  let cityDisplay = document.querySelector("#main-city");
+  cityDisplay.innerHTML = searchValue;
 }
 
-submitBtn.addEventListener("submit", searchCity);
+searchForm.addEventListener("submit", displayInfo);
