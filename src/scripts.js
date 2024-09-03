@@ -9,10 +9,12 @@ function searchCity(city) {
 
 function updateWeather(response) {
   let temperatureValue = Math.floor(response.data.temperature.current);
-
   let weatherValue = document.querySelector("#weather-value");
-
   weatherValue.innerHTML = temperatureValue;
+
+  //get & update the weather conditions
+  let weatherConditions = document.querySelector("#weather-condition");
+  weatherConditions.innerHTML = response.data.condition.description;
 }
 
 function displayInfo(event) {
