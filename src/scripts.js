@@ -15,6 +15,14 @@ function updateWeather(response) {
   //get & update the weather conditions
   let weatherConditions = document.querySelector("#weather-condition");
   weatherConditions.innerHTML = response.data.condition.description;
+
+  //get & update the humidity
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+  //get & update the wind speed
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = `${response.data.wind.speed}Km/h`;
 }
 
 function displayInfo(event) {
