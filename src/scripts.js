@@ -28,6 +28,12 @@ function updateWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   timeElement.innerHTML = formatDate(date);
+
+  //get & update the weather icon
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.innerHTML = `<img src=${response.data.condition.icon_url}" class="weather-icon"/>`;
+
+  console.log(response.data.condition.icon_url);
 }
 
 function formatDate(date) {
