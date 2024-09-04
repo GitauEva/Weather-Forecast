@@ -14,7 +14,9 @@ function updateWeather(response) {
 
   //get & update the weather conditions
   let weatherConditions = document.querySelector("#weather-condition");
-  weatherConditions.innerHTML = response.data.condition.description;
+  weatherConditions.innerHTML = response.data.condition.description
+    .toLowerCase()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
 
   //get & update the humidity
   let humidityElement = document.querySelector("#humidity");
@@ -31,9 +33,7 @@ function updateWeather(response) {
 
   //get & update the weather icon
   let weatherIcon = document.querySelector("#icon");
-  weatherIcon.innerHTML = `<img src=${response.data.condition.icon_url}" class="weather-icon"/>`;
-
-  console.log(response.data.condition.icon_url);
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
 }
 
 function formatDate(date) {
@@ -65,8 +65,12 @@ function displayInfo(event) {
   //Getting the HTML to be able to display the Value from the search bar
 
   let cityDisplay = document.querySelector("#main-city");
-  cityDisplay.innerHTML = searchValue;
+  cityDisplay.innerHTML = searchValue
+    .toLowerCase()
+    .replace(/\b\w/g, (char) => char.toUpperCase());
   searchCity(searchValue);
 }
 
 searchForm.addEventListener("submit", displayInfo);
+
+searchCity("Nairobi");
