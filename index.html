@@ -10,22 +10,22 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/styles.css" />
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Weather Forecast</title>
   </head>
   <body>
     <div class="main-content">
       <header>
         <form id="search-form">
-        <h1 class="welcome">Welcome to Clima Forecast</h1>
-        <input
-          type="search"
-          name="search"
-          id="search"
-          placeholder="Enter a City ..."
-          required
-        />
-        <input type="submit" value="Search" name="submit" id="submit">
+          <h1 class="welcome">Welcome to Clima Forecast</h1>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Enter a City ..."
+            required
+          />
+          <input type="submit" value="Search" name="submit" id="submit" />
         </form>
       </header>
       <hr />
@@ -33,12 +33,16 @@
         <div class="main-container">
           <h1 class="main-city" id="main-city">Nairobi</h1>
           <p>
-          <span id="time"> </span>, <span id="weather-condition">Scattered Clouds</span> <br />
-            Humidity: <strong id="humidity"></strong>, Wind: <strong id="wind-speed"></strong>
+            <span id="time"> </span>,
+            <span id="weather-condition">Scattered Clouds</span> <br />
+            Humidity: <strong id="humidity"></strong>, Wind:
+            <strong id="wind-speed"></strong>
           </p>
         </div>
         <div class="weather-details">
-          <p><div class="weather-icon">⛅</div> <div class="weather-value" id="weather-value"> 12</div> <div class="weather-metrics">°C</div></p>
+          <div id="icon"></div>
+          <div class="weather-value" id="weather-value"></div>
+          <div class="weather-metrics">°C</div>
         </div>
       </main>
       <hr />
