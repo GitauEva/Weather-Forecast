@@ -23,6 +23,12 @@ function updateWeather(response) {
   //get & update the wind speed
   let windSpeed = document.querySelector("#wind-speed");
   windSpeed.innerHTML = `${response.data.wind.speed}Km/h`;
+
+  //get & update the time element
+  let timeElement = document.querySelector("#time");
+  timeElement.innerHTML = "Tuesday 14:20";
+
+  console.log(response.data);
 }
 
 function displayInfo(event) {
