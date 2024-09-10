@@ -34,6 +34,8 @@ function updateWeather(response) {
   //get & update the weather icon
   let weatherIcon = document.querySelector("#icon");
   weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -72,7 +74,14 @@ function displayInfo(event) {
 }
 
 //Display the weather forecast for the next couple of days
-function displayWeatherForecast() {
+function getForecast(city) {
+  let apiKey = "f3bc84a5t55d232e835bfe4a96o890e3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayWeatherForecast);
+}
+function displayWeatherForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -94,6 +103,5 @@ function displayWeatherForecast() {
 }
 
 searchForm.addEventListener("submit", displayInfo);
-displayWeatherForecast();
 
 searchCity("Nairobi");
