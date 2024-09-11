@@ -81,8 +81,11 @@ strong {
   line-height: 20px;
 }
 .weather-forecast-icon {
-  text-align: center;
-  font-size: 30px;
+  padding-top: 10px;
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
 }
 .weather-forecast-temps {
   display: flex;
@@ -93,9 +96,6 @@ strong {
 }
 .weather-forecast-temp {
   padding: 0 10px;
-}
-.weather-forecast-icon {
-  padding-top: 10px;
 }
 /* Footer Styling */
 footer {
